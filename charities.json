@@ -1,0 +1,15 @@
+[
+    {
+      "name": "Dogs Trust",
+      "location": "Dublin",
+      "cause": "Animals"},
+    {
+      "name": "Simon Community",
+      "location": "Meath",
+      "cause": "Environment"},
+    {
+      "name": "Irish Cancer Society",
+      "location": "Galway",
+      "cause": "Health"
+    }
+]
