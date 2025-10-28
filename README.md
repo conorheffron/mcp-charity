@@ -11,7 +11,7 @@ python3 charity_server.py
 ```
 ### Test via CLI with curl
 ```shell
-(.venv) conorheffron@Conors-MacBook-Pro mcp-charity % curl --request POST \
+curl --request POST \
   --url http://localhost:8000/mcp \
   --header 'accept: application/json, text/event-stream' \
   --header 'content-type: application/json' \
