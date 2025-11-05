@@ -16,17 +16,15 @@ def query_charities(name: Optional[str] = None,
                     location: Optional[str] = None,
                     cause: Optional[str] = None):
     """Query Charities Data in memory by optional name/location, or cause search strings"""
-    results = []
-    for charity in charities_data:
-        if (name and name.lower() not in charity["name"].lower()) or \
-                (location and location.lower() not in charity["location"].lower()) or \
-                (cause and cause.lower() not in charity["cause"].lower()):
-            continue
-        results.append(charity)
-    if not results:
-        return charities_data
-    else:
-        return results
+    # Use list comprehension for cleaner filtering / search
+    results = [
+        charity for charity in charities_data
+        if (not name or name.lower() in charity["name"].lower()) and
+           (not location or location.lower() in charity["location"].lower()) and
+           (not cause or cause.lower() in charity["cause"].lower())
+    ]
+    # Return results if found, otherwise return the original data
+    return results if results else charities_data
 
 if __name__ == "__main__":
     app.run(transport="http", host="0.0.0.0", port=8000)
