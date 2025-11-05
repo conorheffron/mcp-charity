@@ -27,4 +27,4 @@ async def query_charities(charity_name: Optional[str] = None,
     return results if results else charities_data
 
 if __name__ == "__main__":
-    app.run(transport="http", host="0.0.0.0", port=8000)
+    mcp.run(transport="http", host="0.0.0.0", port=8000)
