@@ -11,9 +11,10 @@ with open("charities.json", "r") as file:
 
 # Define a tool to query charity data
 @app.tool(name="query_charities", description="Query charity data by name")
-def query_charities(name: Optional[str] = None, 
-                    location: Optional[str] = None, 
+def query_charities(name: Optional[str] = None,
+                    location: Optional[str] = None,
                     cause: Optional[str] = None):
+    """Query Charities Data in memory by optional name/location, or cause search strings"""
     results = []
     for charity in charities_data:
         if (name and name.lower() not in charity["name"].lower()) or \
@@ -27,4 +28,5 @@ def query_charities(name: Optional[str] = None,
         return results
 
 if __name__ == "__main__":
+    """Main process"""
     app.run(transport="http", host="0.0.0.0", port=8000)
