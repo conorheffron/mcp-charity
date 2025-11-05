@@ -1,3 +1,4 @@
+"""MCP Server module"""
 import json
 from typing import Optional
 from fastmcp import FastMCP
@@ -6,7 +7,7 @@ from fastmcp import FastMCP
 app = FastMCP(name="CharityQueryServer", stateless_http=True)
 
 # Load the local JSON file containing charity data
-with open("charities.json", "r") as file:
+with open("charities.json", mode="r", encoding="utf-8") as file:
     charities_data = json.load(file)
 
 # Define a tool to query charity data
@@ -28,5 +29,4 @@ def query_charities(name: Optional[str] = None,
         return results
 
 if __name__ == "__main__":
-    """Main process"""
     app.run(transport="http", host="0.0.0.0", port=8000)
