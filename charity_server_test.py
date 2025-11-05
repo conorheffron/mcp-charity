@@ -1,11 +1,10 @@
 """charity_server_test.py: Tests for the charity MCP server."""
 import pytest
 from fastmcp.client import Client
-from fastmcp.client.transports import FastMCPTransport
 from charity_server import mcp
 
 @pytest.fixture
-async def setup_mcp_client():
+async def mcp_client():
     """Setup MCP client for testing."""
     async with Client(transport=mcp) as client:
         yield client
