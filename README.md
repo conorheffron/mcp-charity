@@ -1,5 +1,10 @@
 # mcp-charity
 
+### Install Dependencies
+```shell
+pip install -r requirements.txt
+```
+
 ### Start MCP Server (`transport=STDIO`, for CLI interface instead of HTTP / Postman)
 ```shell
 fastmcp run charity_server.py

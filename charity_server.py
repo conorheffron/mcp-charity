@@ -2,8 +2,6 @@ import json
 from typing import Optional
 from fastmcp import FastMCP
 
-from starlette.middleware.cors import CORSMiddleware
-
 # Initialize the FastMCP server & set stateless to allow for test session IDs for curl POST request
 app = FastMCP(name="CharityQueryServer", stateless_http=True)
 
@@ -13,7 +11,9 @@ with open("charities.json", "r") as file:
 
 # Define a tool to query charity data
 @app.tool(name="query_charities", description="Query charity data by name")
-def query_charities(name: Optional[str] = None, location: Optional[str] = None, cause: Optional[str] = None):
+def query_charities(name: Optional[str] = None, 
+                    location: Optional[str] = None, 
+                    cause: Optional[str] = None):
     results = []
     for charity in charities_data:
         if (name and name.lower() not in charity["name"].lower()) or \
