@@ -22,15 +22,16 @@ curl --request POST \
   --header 'content-type: application/json' \
   --header 'mcp-session-id: my-test-session-124' \
   --data '{ "method": "tools/call", 
-  "params": { "name": "query_charities", 
-      "arguments": { 
-          "charity_name": "", 
-          "location": "Gal", 
-          "cause": "" 
-      } 
-  }, 
-  "jsonrpc": "2.0", 
-  "id": 9}'
+    "params": {
+        "name": "query_charities", 
+        "arguments": { 
+            "charity_name": "", 
+            "location": "Gal", 
+            "cause": "" 
+        } 
+        }, 
+        "jsonrpc": "2.0", 
+        "id": 9}'
 ```
 ### Response from curl
 ```shell
@@ -52,6 +53,8 @@ data: {
 ```
 
 ### Use `Postman` to connect & tests available app tools / end-points
+ - Connect to MCP end-point `/mcp`
+ - The test available tools, in this case, try `query_charities` tool
 ![postman](./screenshots/postman.png)
 
 ### HTTP Endpoint
@@ -65,15 +68,15 @@ curl --request POST \
   --header 'content-type: application/json' \
   --header 'mcp-session-id: my-test-session-124' \
   --data '{ "method": "tools/call", 
-  "params": { "name": "query_charities", 
+  "params": {
+      "name": "query_charities", 
       "arguments": { 
           "charity_name": "", 
           "location": "", 
-          "cause": "Animals" 
-      } 
-  }, 
-  "jsonrpc": "2.0", 
-  "id": 9}'
+          "cause": "Animals" } 
+      }, 
+      "jsonrpc": "2.0", 
+      "id": 9 }'
 ```
 ### Curl Response
 ```shell
