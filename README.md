@@ -1,5 +1,6 @@
 # mcp-charity
 
+## Quick Start
 ### Install Dependencies
 ```shell
 pip install -r requirements.txt
@@ -14,6 +15,10 @@ fastmcp run charity_server.py
 ```shell
 python3 charity_server.py
 ```
+
+---
+## Testing
+
 ### Test via CLI with curl (__Note:__ Allows for sub string search values - `direct match not required!`)
 ```shell
 curl --request POST \
