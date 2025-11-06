@@ -14,7 +14,7 @@ fastmcp run charity_server.py
 ```shell
 python3 charity_server.py
 ```
-### Test via CLI with curl
+### Test via CLI with curl (Allows for subs string search values - direct match not required!)
 ```shell
 curl --request POST \
   --url http://localhost:8000/mcp \
@@ -24,7 +24,7 @@ curl --request POST \
   --data '{ "method": "tools/call", 
   "params": { "name": "query_charities", 
       "arguments": { 
-          "name": "", 
+          "charity_name": "", 
           "location": "Gal", 
           "cause": "" 
       } 
@@ -58,21 +58,30 @@ data: {
  - http://localhost:8000/mcp
 
 ### Request Body for POST request to `query_charities` tool
-```json
-{
-  "method": "tools/call",
-  "params": {
-    "name": "query_charities",
-    "arguments": {
-      "name": "",
-      "location": "",
-      "cause": "Animals"
-    }
-  }
-}
+```shell
+curl --request POST \
+  --url http://localhost:8000/mcp \
+  --header 'accept: application/json, text/event-stream' \
+  --header 'content-type: application/json' \
+  --header 'mcp-session-id: my-test-session-124' \
+  --data '{ "method": "tools/call", 
+  "params": { "name": "query_charities", 
+      "arguments": { 
+          "charity_name": "", 
+          "location": "", 
+          "cause": "Animals" 
+      } 
+  }, 
+  "jsonrpc": "2.0", 
+  "id": 9}'
+```
+### Curl Response
+```shell
+event: message
+data: {"jsonrpc":"2.0","id":9,"result":{"content":[{"type":"text","text":"[{\"name\":\"Dogs Trust\",\"location\":\"Dublin\",\"cause\":\"Animals\"}]"}],"isError":false}}
 ```
 
-### Response Body
+### Postman Response Body (Formatted)
 ```json
 {
     "content": [
