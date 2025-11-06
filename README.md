@@ -14,7 +14,7 @@ fastmcp run charity_server.py
 ```shell
 python3 charity_server.py
 ```
-### Test via CLI with curl (Allows for subs string search values - direct match not required!)
+### Test via CLI with curl (__Note:__ Allows for sub string search values - 'direct match not required!')
 ```shell
 curl --request POST \
   --url http://localhost:8000/mcp \
