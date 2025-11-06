@@ -5,16 +5,16 @@
 pip install -r requirements.txt
 ```
 
-### Start MCP Server (`transport=STDIO`, for CLI interface instead of HTTP / Postman)
+### Start MCP Server with `FASTMCP` (`transport=STDIO`, for CLI interface instead of HTTP / Postman)
 ```shell
 fastmcp run charity_server.py
 ```
 
-### Start MCP Server for Testing
+### Start MCP Server for Testing with recommended python init main process
 ```shell
 python3 charity_server.py
 ```
-### Test via CLI with curl (__Note:__ Allows for sub string search values - 'direct match not required!')
+### Test via CLI with curl (__Note:__ Allows for sub string search values - `direct match not required!`)
 ```shell
 curl --request POST \
   --url http://localhost:8000/mcp \
