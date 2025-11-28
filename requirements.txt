@@ -55,7 +55,7 @@ py-key-value-shared==0.2.8
 pycparser==2.23
 pydantic==2.12.4
 pydantic-settings==2.11.0
-pydantic_core==2.41.4
+pydantic_core==2.41.5
 Pygments==2.19.2
 pyperclip==1.11.0
 pytest~=8.1.1
