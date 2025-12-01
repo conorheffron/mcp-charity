@@ -9,7 +9,7 @@ cachetools==6.2.2
 certifi==2025.10.5
 cffi==2.0.0
 charset-normalizer==3.4.4
-click==8.3.0
+click==8.3.1
 cryptography==46.0.3
 cyclopts==4.0.0
 diskcache==5.6.3
