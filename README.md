@@ -9,17 +9,17 @@
 ## Quick Start
 ### Install Dependencies
 ```shell
-pip install -r requirements.txt
+pipenv install -r requirements.txt
 ```
 
 ### Start MCP Server with `FASTMCP` (`transport=STDIO`, for CLI interface instead of HTTP / Postman)
 ```shell
-fastmcp run charity_server.py
+pipenv run fastmcp run charity_server.py
 ```
 
 ### Start MCP Server for Testing with recommended python init main process
 ```shell
-python3 charity_server.py
+pipenv run python3 charity_server.py
 ```
 
 ---
