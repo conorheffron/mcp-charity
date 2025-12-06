@@ -70,6 +70,9 @@ data: {
 ### HTTP Endpoint
  - http://localhost:8000/mcp
 
+### Corresponding Logs
+![fastmcp-logs](./screenshots/fastmcp-logs.png)
+
 ### Request Body for POST request to `query_charities` tool
 ```shell
 curl --request POST \
