@@ -6,10 +6,20 @@
 
 [![Pylint](https://github.com/conorheffron/mcp-charity/actions/workflows/pylint.yml/badge.svg)](https://github.com/conorheffron/mcp-charity/actions/workflows/pylint.yml)
 
+## Tech
+ - Python 3.14, PyCharm, pipenv, fastmcp, Postman
+
 ## Quick Start
 ### Install Dependencies
 ```shell
-pipenv install -r requirements.txt
+pipenv --python 3.14
+```
+
+```shell
+pipenv run pip install -r requirements.txt
+```
+```shell
+pipenv shell
 ```
 
 ### Start MCP Server with `FASTMCP` (`transport=STDIO`, for CLI interface instead of HTTP / Postman)
@@ -66,6 +76,12 @@ data: {
  - Connect to MCP end-point `/mcp`
  - The test available tools, in this case, try `query_charities` tool
 ![postman](./screenshots/postman.png)
+
+![postman](./screenshots/postman-galway.png)
+
+![postman](./screenshots/postman-meath.png)
+
+![postman](./screenshots/postman-all.png)
 
 ### HTTP Endpoint
  - http://localhost:8000/mcp
