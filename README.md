@@ -6,11 +6,16 @@
 
 [![Pylint](https://github.com/conorheffron/mcp-charity/actions/workflows/pylint.yml/badge.svg)](https://github.com/conorheffron/mcp-charity/actions/workflows/pylint.yml)
 
+## Tech
+ - Python 3.14, PyCharm, pipenv, fastmcp, Postman
+
 ## Quick Start
 ### Install Dependencies
 ```shell
 pipenv --python 3.14
+```
 
+```shell
 pipenv run pip install -r requirements.txt
 ```
 ```shell
