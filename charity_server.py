@@ -4,7 +4,7 @@ from typing import Optional
 from fastmcp import FastMCP
 
 # Initialize the FastMCP server & set stateless to allow for test session IDs for curl POST request
-mcp = FastMCP(name="CharityQueryServer", stateless_http=True)
+mcp = FastMCP(name="CharityQueryServer")
 
 # Load the local JSON file containing charity data
 with open("charities.json", mode="r", encoding="utf-8") as file:
