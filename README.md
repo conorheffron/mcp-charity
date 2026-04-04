@@ -16,7 +16,7 @@ pipenv --python 3.14
 ```
 
 ```shell
-pipenv run pip install -r requirements.txt
+sudo pipenv run pip install -r requirements.txt
 ```
 ```shell
 pipenv shell
