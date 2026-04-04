@@ -75,9 +75,10 @@ data: {
 ### Use `Postman` to connect & tests available app tools / end-points
  - Connect to MCP end-point `/mcp`
  - The test available tools, in this case, try `query_charities` tool
+
 ![postman](./screenshots/postman.png)
 
-![postman](./screenshots/postman-galway.png)
+![postman](./screenshots/postman-gal.png)
 
 ![postman](./screenshots/postman-meath.png)
 
