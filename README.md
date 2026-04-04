@@ -7,7 +7,7 @@
 [![Pylint](https://github.com/conorheffron/mcp-charity/actions/workflows/pylint.yml/badge.svg)](https://github.com/conorheffron/mcp-charity/actions/workflows/pylint.yml)
 
 ## Tech
- - Python 3.14, PyCharm, pipenv, fastmcp, Postman
+ - Python 3.14, PyCharm, pipenv, fastmcp 3, Postman
 
 ## Quick Start
 ### Install Dependencies
@@ -16,10 +16,10 @@ pipenv --python 3.14
 ```
 
 ```shell
-pipenv run pip install -r requirements.txt
+sudo pipenv run pip install -r requirements.txt
 ```
 ```shell
-pipenv shell
+sudo pipenv shell
 ```
 
 ### Start MCP Server with `FASTMCP` (`transport=STDIO`, for CLI interface instead of HTTP / Postman)
