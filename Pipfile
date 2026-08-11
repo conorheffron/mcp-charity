@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-fastmcp = "==3.4.5"
+fastmcp = "==3.4.6"
 
 [dev-packages]
 pytest = "~=9.1.1"
